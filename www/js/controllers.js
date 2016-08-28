@@ -3,6 +3,7 @@ angular.module('starter.controllers', ['starter.services', 'ngOpenFB'])
   .controller("LoginCtrl", function($scope, $state, ngFB) {
 
     $scope.login = function() {
+      
        console.log("log normal");
        //Log in to your own databse
     }
