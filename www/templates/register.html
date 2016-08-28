@@ -1,0 +1,38 @@
+<ion-view view-title="Register" name="register-view">
+  <ion-content class="padding">
+  	   <div>
+		  <h2>Welcome to our application!</h2>
+		</div>	
+    <div class="list list-inset">
+     <h3 class="center">Registration</h3>
+      <form name="form" ng-submit="register()" role="form" ng-controller="RegisterCtrl">
+        <div class="form-group">
+          <label class="item item-input">
+              <input type="text" placeholder="Username" ng-model="data.username">
+          </label>
+
+            <label class="item item-input">
+              <input type="email" placeholder="Email Address" ng-model="data.email">
+          </label>
+
+          <label class="item item-input">
+              <input type="password" placeholder="Password" ng-model="data.password">
+          </label>
+        
+          <label class="item item-input">
+              <input type="password" placeholder="Confirm Password" ng-model="data.confirmPassword">
+          </label>
+        </div> 
+        <div class="form-actions">
+             <button class="button button-block button-calm" ng-click="register(data)">Register</button>
+            <a href="#/login" class="btn btn-link">Cancel</a>
+        </div>
+    </form>
+      </div>
+      <div>
+      	 <a ng-click="goToLogin()"><p>already registered?</p></a>
+      </div>
+
+    
+  </ion-content>
+</ion-view>
