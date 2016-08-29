@@ -9,7 +9,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
 
 .run(function($ionicPlatform, ngFB) {
 
-  ngFB.init({appId: 'your appId', tokenStore: 'tokenStore' });
+  ngFB.init({appId: '1161624057237110', tokenStore: '61d1cb2b5598e78d3acc294bff560691' });
 
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard

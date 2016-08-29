@@ -3,7 +3,7 @@ angular.module('starter.controllers', ['starter.services', 'ngOpenFB'])
   .controller("LoginCtrl", function($scope, $state, ngFB) {
 
     $scope.login = function() {
-      
+
        console.log("log normal");
        //Log in to your own databse
     }
@@ -12,8 +12,11 @@ angular.module('starter.controllers', ['starter.services', 'ngOpenFB'])
        console.log("log facebook");
        //Log in with facebook API
 
-        ngFB.login({scope: 'email,read_stream,publish_actions'}).then(
+        ngFB.login({scope: 'email,user_posts,publish_actions'}).then(
         function (response) {
+
+            console.log("VOICI LA REPONSE: " +response);
+
             if (response.status === 'connected') {
                 console.log('Facebook login succeeded');
                 $state.go('tab.account');
