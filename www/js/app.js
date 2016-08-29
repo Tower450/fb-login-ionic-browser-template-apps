@@ -49,6 +49,13 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
       controller: 'RegisterCtrl'
   })
 
+  .state('profile', {
+    url: "/profile",
+    templateUrl: "templates/profile.html", 
+    controller: "ProfileCtrl"
+  
+  })
+
 
   // setup an abstract state for the tabs directive
   .state('tab', {

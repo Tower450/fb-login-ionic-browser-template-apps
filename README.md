@@ -40,6 +40,8 @@ ionic build android
 
 then run your .apk or iOS installer on your device
 
+**DO NOT FORGET TO ADD THIS PLUGIN: cordova plugin add cordova-plugin-inappbrowser**
+
 Author: Jonathan Tourangeau
 
 Thanks for the help of those:

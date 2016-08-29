@@ -1,5 +1,7 @@
 angular.module('starter.controllers', ['starter.services', 'ngOpenFB'])
   
+
+ //page login
   .controller("LoginCtrl", function($scope, $state, ngFB) {
 
     $scope.login = function() {
@@ -15,12 +17,15 @@ angular.module('starter.controllers', ['starter.services', 'ngOpenFB'])
         ngFB.login({scope: 'email,user_posts,publish_actions'}).then(
         function (response) {
 
-            console.log("VOICI LA REPONSE: " +response);
+            console.log("VOICI LA REPONSE: " +response.status);
 
             if (response.status === 'connected') {
-                console.log('Facebook login succeeded');
+                console.log('Facebook login succeeded'); 
+
+
                 $state.go('tab.account');
-                $scope.closeLogin();
+                //$scope.closeLogin();
+
             } else {
                 alert('Facebook login failed');
             }
@@ -41,6 +46,7 @@ angular.module('starter.controllers', ['starter.services', 'ngOpenFB'])
 
   })
 
+  //page register
   .controller('RegisterCtrl', function($scope, $state) {
 
       $scope.data = {};
@@ -57,6 +63,22 @@ angular.module('starter.controllers', ['starter.services', 'ngOpenFB'])
       }
 
   })
+
+  .controller('ProfileCtrl', function ($scope, ngFB) {
+    ngFB.api({
+        path: '/me',
+        params: {fields: 'id,name'}
+    }).then(
+    function (user) {
+            $scope.user = user;
+    },
+    function (error) {
+            alert('Facebook error: ' + error.error_description);
+    });
+ })
+
+
+
 
   .controller('DashCtrl', function($scope) {
 
@@ -82,14 +104,18 @@ angular.module('starter.controllers', ['starter.services', 'ngOpenFB'])
     $scope.chat = Chats.get($stateParams.chatId);
   })
 
-  .controller('AccountCtrl', function($scope, Auth, $state) {
+  .controller('AccountCtrl', function($scope,$state, ngFB) {
     $scope.settings = {
       enableFriends: true
     };
 
     $scope.logout = function() {
-      Auth.$unauth();
-      $state.go('login');
+      ngFB.logout().then(
+        function() {
+           alert('Logout successful');
+           $state.go('login');
+        }, errorHandler);
+      
     };
   });
 
