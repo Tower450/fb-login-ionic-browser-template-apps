@@ -17,11 +17,16 @@ Running your application
 
 You need to add the platform you need with those command and run it(do not forget sudo for unix!).
 //For Android
+--------------
 ionic platform add android
+
 ionic run android
 
 //For iOS
+------------
+
 ionic platform add ios
+
 ionic run iOS
 
 if you plug your device while running those command it will execute your application.
@@ -30,6 +35,7 @@ if you plug your device while running those command it will execute your applica
 Or you can create some build .apk
 
 ionic build ios
+
 ionic build android
 
 then run your .apk or iOS installer on your device
@@ -37,5 +43,7 @@ then run your .apk or iOS installer on your device
 Author: Jonathan Tourangeau
 
 Thanks for the help of those:
+
 https://ccoenraets.github.io/ionic-tutorial/ionic-facebook-integration.html
+
 https://github.com/shukerullah/ionic-facebook-integration
