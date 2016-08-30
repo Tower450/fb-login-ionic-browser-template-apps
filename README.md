@@ -42,6 +42,13 @@ then run your .apk or iOS installer on your device
 
 **DO NOT FORGET TO ADD THIS PLUGIN: cordova plugin add cordova-plugin-inappbrowser**
 
+** DO NOT FORGET TO PUT THE GOOD OAuth URL redirect in developers.facebook.com in the
+  facebook connexion ( left panel of the application page ) either way you will get
+	AN URL ERROR OR CANNOT LOGIN **
+
+
+
+
 Author: Jonathan Tourangeau
 
 Thanks for the help of those:
