@@ -5,6 +5,9 @@
 I did all the architecture you need, you can customize this template and then run it without
 configuring the fblogin yourself.
 
+This facebook_connection template will only work on browser dev. (ionic serve --lab)
+ 
+
 Setting up ngFB/OpenFB
 -----------------------
 
