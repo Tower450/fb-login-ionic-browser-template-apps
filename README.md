@@ -1,4 +1,4 @@
-# fb-login-template-apps
+# fb-login-ionic-browser-template-apps 
  This is an ionic template i made for people who wants to make apps with Facebook login and their own database login.
  It makes an easy cross plate-form UI for login and Facebook Login.
 
@@ -14,6 +14,8 @@ Setting up ngFB/OpenFB
 In your app.js put the Facebook_ID in this method.
 
 ngFB.init({appId: 'YOUR_FB_APP_ID'});
+
+
 
 Running your application
 ------------------------
@@ -49,7 +51,8 @@ then run your .apk or iOS installer on your device
   facebook connexion ( left panel of the application page ) either way you will get
 	AN URL ERROR OR CANNOT LOGIN by example http://localhost/oauthcallback.html**
 
-
+** Add on android manifest if got permission error :**
+ <uses-permission android:name="android.permission.INTERNET" />
 
 Author: Jonathan Tourangeau
 
